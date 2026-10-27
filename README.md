@@ -9,6 +9,8 @@ input ─► (drive) ─► Tract (44〜88 セクションの導波管) ─► M
         気息ノイズ ──────────────┘   ← Aspiration (%)
 ```
 
+![Pink Tron UI](docs/images/pink-tron-ui.png)
+
 - 原典: Neil Thapen [Pink Trombone](https://dood.al/pinktrombone/) / 参照実装: [zakaton/Pink-Trombone](https://github.com/zakaton/Pink-Trombone)（GPL-3.0）
 - **原典のパラメータをすべて公開**（Frequency, Tenseness, Intensity, Loudness, Noise, Vibrato ×3, Tongue ×2, Tract Length, Constriction ×4）＋ 追加 4 つ（Aspiration, Nasal, Mix, Output）
 - 実装は原典 JS と **double 精度で一致**（最大絶対誤差 5.8e-15、`tests/faithfulness/run.sh`）

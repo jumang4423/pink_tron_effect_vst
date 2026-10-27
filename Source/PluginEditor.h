@@ -79,7 +79,7 @@ private:
     void addToggle (const juce::String& parameterId, const juce::String& name, juce::Rectangle<int> bounds);
     void paintGroupTitle (juce::Graphics&, const juce::String&, int y);
 
-    PinkTronAudioProcessor& processor;
+    PinkTronAudioProcessor& proc;
     TronLookAndFeel lookAndFeel;
     TractView tractView;
 

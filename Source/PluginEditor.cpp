@@ -284,7 +284,7 @@ void TractView::paint (juce::Graphics& g)
 
 // ---------------------------------------------------------------------------
 PinkTronAudioProcessorEditor::PinkTronAudioProcessorEditor (PinkTronAudioProcessor& p)
-    : AudioProcessorEditor (&p), processor (p), tractView (p)
+    : AudioProcessorEditor (&p), proc (p), tractView (p)
 {
     setLookAndFeel (&lookAndFeel);
     addAndMakeVisible (tractView);
@@ -354,7 +354,7 @@ void PinkTronAudioProcessorEditor::addKnob (const juce::String& parameterId, con
     addAndMakeVisible (*knob->slider);
 
     knob->attachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment> (
-        processor.apvts, parameterId, *knob->slider);
+        proc.apvts, parameterId, *knob->slider);
 
     knob->label->setBounds (cell.getX(), cell.getY(), cell.getWidth(), 13);
     knob->slider->setBounds (cell.getX() + (cell.getWidth() - (small ? 48 : 84)) / 2, cell.getY() + 14,
@@ -371,7 +371,7 @@ void PinkTronAudioProcessorEditor::addToggle (const juce::String& parameterId, c
     addAndMakeVisible (*button);
 
     toggleAttachments.push_back (std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment> (
-        processor.apvts, parameterId, *button));
+        proc.apvts, parameterId, *button));
 
     toggles.push_back (std::move (button));
 }

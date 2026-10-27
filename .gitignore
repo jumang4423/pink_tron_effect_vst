@@ -1,0 +1,17 @@
+# 参照用に clone した他者リポジトリ（コミットしない）
+reference/
+
+# 逆解析・作業用
+.opencode/
+
+# ビルド成果物
+build/
+Builds/
+cmake-build-*/
+*.o
+*.a
+*.dylib
+*.vst3/
+*.clap/
+*.component
+.DS_Store
